@@ -4,7 +4,7 @@
 , "main": "./priority_queue.js"
 , "scripts":
   { "test": "vows --spec" }
-, "devDependencies": 
+, "devDependencies":
   { "vows": "*" }
 , "repository":
   { "type": "git"

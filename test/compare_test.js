@@ -5,10 +5,14 @@ var pq     = require('../priority_queue')
   , vows   = require('vows')
 
   , PriorityQueue = pq.PriorityQueue
+  ;
 
-function compare_todo(a, b) { return b.priority - a.priority }
+function compare_todo(a, b) {
+  return b.priority - a.priority;
+}
 var todos =
-[ { task: 'write tests'
+[
+  { task: 'write tests'
   , priority: 5
   }
 , { task: 'enjoy the spring'
@@ -17,7 +21,7 @@ var todos =
 , { task: 'have coffee'
   , priority: 50
   }
-]
+];
 
 var suite = vows.describe('compare functions').addBatch(
 { 'A queue sorting ToDo items':
@@ -26,5 +30,5 @@ var suite = vows.describe('compare functions').addBatch(
       assert.strictEqual(q.shift().task, 'enjoy the spring')
     }
   }
-}).export(module)
+}).export(module);
 
